@@ -1,0 +1,10 @@
+header {
+    text-align: center;
+    background-color: bisque;
+    padding: 20px;
+}
+
+header nav a {
+    margin: 15px;
+    font-size: 25px;
+}

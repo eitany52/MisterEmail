@@ -1,0 +1,15 @@
+.email-preview h1{
+    padding: 8px;
+    cursor: pointer;
+    border: solid gray 1px;
+    margin: 0;
+}
+
+.email-preview {
+    width: 800px;
+}
+
+.email-preview a {
+    color: black;
+    text-decoration: none;
+}

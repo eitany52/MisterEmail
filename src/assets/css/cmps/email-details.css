@@ -1,0 +1,12 @@
+.email-details {
+    text-align: center;
+}
+
+.email-details button {
+    margin-inline-end: 15px;
+    cursor: pointer;
+}
+
+.email-details a {
+    font-size: 18px;
+}
