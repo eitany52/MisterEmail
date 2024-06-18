@@ -1,0 +1,25 @@
+.filter-container {
+    display: flex;
+    align-items: center;
+}
+
+.filter-container input {
+    background-color: #eaf1fb;
+    border-radius: 15px;
+    border: none;
+    width: 60%;
+    font-size: 1em;
+    padding-block: 12px;
+    padding-inline: 15px;
+}
+
+.is-read-container select {
+    font-size: 16px;
+    margin-inline-start: 6px;
+}
+
+.filter-container button {
+    cursor: pointer;
+    background-color: unset;
+    border: 0;
+}

@@ -1,15 +1,87 @@
-.email-preview h1{
-    padding: 8px;
-    cursor: pointer;
-    border: solid gray 1px;
-    margin: 0;
+* {
+    box-sizing: border-box;
 }
 
 .email-preview {
-    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+    border: 1px solid rgba(100, 121, 143, 0.122);
+    padding: 10px;
+    gap: 10px;
 }
 
-.email-preview a {
-    color: black;
-    text-decoration: none;
+.star-icon.starred {
+    font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 200, 'opsz' 48;
+    color: gold;
+    transition: 0.3s;
 }
+
+.star-icon {
+    transition: 0.3s;
+}
+
+.email-preview :is(.email-from, .email-subject) {
+    font-weight: bold;
+}
+
+.email-preview.read {
+    background-color: #f2f6fc;
+}
+
+.email-preview.read :is(.email-from, .email-subject) {
+    font-weight: normal;
+}
+
+.email-preview:hover {
+    box-shadow: inset 1px 0 0 #dadce0,
+        inset -1px 0 0 #dadce0,
+        0 1px 2px 0 rgba(60, 64, 67, 0.3),
+        0 1px 3px 1px rgba(60, 64, 67, 0.15);
+}
+
+.email-preview span:is(.delete-icon, .is-read-icon, .restore-icon) {
+    display: none;
+}
+
+.email-preview:hover span:is(.delete-icon, .is-read-icon, .restore-icon) {
+    display: flex;
+}
+
+.main-email-container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.main-email-container .email-from {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 12em;
+    min-width: 12em;
+    /* user-select: none; */
+
+}
+
+.main-email-container .email-subject {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* user-select: none; */
+}
+
+/* .main-email-container .email-separator {
+    padding-inline: 0.5em;
+} */
+
+.main-email-container .email-body {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 0;
+    color: #5f6368;
+    /* user-select: none; */
+}
+

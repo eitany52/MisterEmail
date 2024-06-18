@@ -1,19 +1,5 @@
 .email-list {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
-}
-
-.email-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.email-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.email-actions button {
-    cursor: pointer;
-    /* background-color: ligt; */
 }

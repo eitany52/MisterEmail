@@ -1,0 +1,10 @@
+:root {
+    --main-bg-color: lightblue;
+    --mail-clr-1: #5f6368;
+    --mail-clr-2: #202124;
+    --mail-bg-clr-1: #f2f6fc;
+    --mail-bg-clr-2: #f6f8fc;
+    --mail-box-shadow-1: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+        0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    --mail-box-shadow-2: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
+}

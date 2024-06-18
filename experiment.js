@@ -1,7 +1,18 @@
-//email: body
-const str1 = "hi my name is eitan yakubov and now i am testing something"
-//filterBy: txt
-const str2 = ""
 
-console.log(str1.includes(str2));
+const filterBy = {
+    status: 'inbox',
+    txt: 'hello',
+    isRead: true
+}
 
+const searchParams = {
+    txt: 'hello',
+    isRead: "true"
+}
+
+// const timeoutId = setTimeout(() => {
+//     console.log("hey")
+// }, 1)
+
+console.log(clearInterval());
+console.log(clearInterval(undefined));

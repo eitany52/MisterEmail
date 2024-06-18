@@ -1,10 +1,18 @@
-header {
-    text-align: center;
+.app-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
     background-color: bisque;
-    padding: 20px;
+    /* text-align: center; */
+    /* padding: 20px; */
+    /* padding-block: 10px; */
 }
 
-header nav a {
-    margin: 15px;
+.app-header a {
     font-size: 25px;
+}
+
+.app-header .email-link {
+    margin-inline: 15px;
 }

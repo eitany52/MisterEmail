@@ -1,0 +1,32 @@
+.email-side-bar {
+    margin-block-start: 5px;
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.compose-icon-container {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 16px;
+    background-color: #c2e7ff;
+    padding-block: 15px;
+    margin-block-end: 15px;
+}
+
+.compose-icon-container:hover {
+    box-shadow:
+        0 1px 3px 0 rgba(60, 64, 67, .3),
+        0 4px 8px 3px rgba(60, 64, 67, .15);
+}
+
+.compose-icon {
+    justify-self: end;
+}
+
+.compose-text {
+    font-size: 20px;
+}

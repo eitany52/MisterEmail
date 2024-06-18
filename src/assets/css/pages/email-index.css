@@ -1,0 +1,30 @@
+.email-index {
+    height: 94vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        ". h"
+        "a m";
+    background-color: #f6f8fc;
+    
+}
+
+.email-index header {
+    grid-area: h;
+}
+
+.email-index aside {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-content: start;
+    gap: 12px;
+}
+
+.email-index main {
+    grid-area: m;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 15px;
+}

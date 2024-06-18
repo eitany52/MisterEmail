@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react"
-import { useParams, Link, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, useOutletContext } from "react-router-dom"
 import { emailService } from "../services/email.service.js"
 
 export function EmailDetails() {
     const [email, setEmail] = useState(null)
     const params = useParams()
     const navigate = useNavigate()
+    const searchParams = useOutletContext()
 
     useEffect(() => {
         loadEmail()
-    }, [params.emailId])
+    }, [])
 
     async function loadEmail() {
         try {
@@ -22,10 +23,14 @@ export function EmailDetails() {
 
     async function onRemoveEmail() {
         try {
-            await emailService.removeEmail(email.id)
-            setEmail(null)
-            navigate('/email')
-
+            if(!email.removedAt) {
+                await emailService.save({...email, removedAt: Date.now()})
+            }
+            else {
+                await emailService.removeEmail(email.id)
+            }
+            const queryParams = `?${searchParams + ''}`
+            navigate(`/email/${params.folder}${queryParams}`)
         } catch (error) {
             console.log("Having issues with removing this email", error)
         }
@@ -33,9 +38,9 @@ export function EmailDetails() {
 
     async function onGoBack() {
         try {
-            await emailService.updateEmail({ ...email, isRead: true })
-            setEmail(email => ({ ...email, isRead: true }))
-            navigate('/email')
+            await emailService.save({ ...email, isRead: true })
+            const queryParams = `?${searchParams + ''}`
+            navigate(`/email/${params.folder}${queryParams}`)
         } catch (error) {
             console.log("Having issues with updating this email", error)
         }
